@@ -51,7 +51,11 @@
 			}
 		}
 	}
-	public bool Checked { get => _value == 1; }
+	public bool Checked 
+	{	 
+		get => _value == 1;
+		set => Value = value ? 1 : 0;
+	}
 	public StateEnum State
 	{
 		get => (StateEnum)Value;
