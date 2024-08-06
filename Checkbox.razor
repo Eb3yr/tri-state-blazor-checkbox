@@ -20,13 +20,10 @@
 			_value = value;
 			if (IsIndeterminate())
 				SetIndeterminate();
+			else if (_value == 1)
+				boundValue = true;
 			else
-			{
-				if (_value == 1)
-					boundValue = true;
-				else
-					boundValue = false;
-			}
+				boundValue = false;
 		}
 	}
 	public bool? ValueBool
